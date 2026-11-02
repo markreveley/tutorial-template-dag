@@ -4,7 +4,7 @@ A builder for the static web edition of a tutorial kept as one Markdown file, pl
 
 ## Where a project finds it
 
-A project runs `build.py` here with its own `config.json`, from a small wrapper (identikey-dev's `tutorials/web/build.py`) or by path. A wrapper looks for this repo at `$TUTORIAL_TEMPLATE_DAG`, then at `../tutorial-template-dag` beside the project's checkout, then at `~/dev/repos/tutorial-template-dag`. CI checks this repo out beside the project and sets `TUTORIAL_TEMPLATE_DAG`; the repo is private, so that checkout needs a token with Contents read on it.
+A project runs `build.py` here with its own `config.json`, from a small wrapper (identikey-dev's `tutorials/web/build.py`) or by path. A wrapper looks for this repo at `$TUTORIAL_TEMPLATE_DAG`, then at `../tutorial-template-dag` beside the project's checkout, then at `~/dev/repos/tutorial-template-dag`. CI checks this repo out beside the project and sets `TUTORIAL_TEMPLATE_DAG`. The repo is public, so that checkout needs no token.
 
 ## What is here
 
