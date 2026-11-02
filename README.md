@@ -1,6 +1,10 @@
 # Tutorial web editions
 
-A builder for the static web edition of a tutorial kept as one Markdown file, plus the parts every edition shares. The IdentiKey tutorial (`identikey-dev/tutorials/web/`) and the Lightning Mesh tutorial (`lightning-mesh-dev/tutorials/web/`) are both built with it.
+A builder for the static web edition of a tutorial kept as one Markdown file, plus the parts every edition shares. The IdentiKey tutorial (`identikey-dev/tutorials/web/`) and the Lightning Mesh tutorial (`lightning-mesh-dev/tutorials/web/`) are both built with it. Until November 2026 this was the `tutorial/` folder of artifact-dag; it moved here with its history.
+
+## Where a project finds it
+
+A project runs `build.py` here with its own `config.json`, from a small wrapper (identikey-dev's `tutorials/web/build.py`) or by path. A wrapper looks for this repo at `$TUTORIAL_TEMPLATE_DAG`, then at `../tutorial-template-dag` beside the project's checkout, then at `~/dev/repos/tutorial-template-dag`. CI checks this repo out beside the project and sets `TUTORIAL_TEMPLATE_DAG`; the repo is private, so that checkout needs a token with Contents read on it.
 
 ## What is here
 
